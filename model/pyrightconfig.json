@@ -1,0 +1,14 @@
+{
+    "reportMissingTypeStubs": false,
+    "reportUnknownMemberType": false,
+    "reportUnknownParameterType": false,
+    "reportUnknownVariableType": false,
+    "reportUnknownArgumentType": false,
+    "reportGeneralTypeIssues": false,
+    "reportOptionalMemberAccess": false,
+    "reportPrivateImportUsage": false,
+    "reportAttributeAccessIssue": false,
+    "typeCheckingMode": "off",
+    "pythonVersion": "3.14",
+    "include": ["model/"]
+}

@@ -1,0 +1,261 @@
+{
+  "github": [
+    {
+      "name": "Redis dictAdd (hash table)",
+      "status": "OK",
+      "entity_id": "83f7adce",
+      "nodes": 231,
+      "depth": 13,
+      "vars_renamed": 7,
+      "funcs_renamed": 2,
+      "has_errors": false,
+      "auto_label": false
+    },
+    {
+      "name": "Linux kernel list_add",
+      "status": "OK",
+      "entity_id": "8e52c3c7",
+      "nodes": 140,
+      "depth": 8,
+      "vars_renamed": 4,
+      "funcs_renamed": 2,
+      "has_errors": false,
+      "auto_label": false
+    },
+    {
+      "name": "OpenSSL EVP digest",
+      "status": "OK",
+      "entity_id": "3b002d75",
+      "nodes": 179,
+      "depth": 11,
+      "vars_renamed": 5,
+      "funcs_renamed": 7,
+      "has_errors": false,
+      "auto_label": false
+    },
+    {
+      "name": "Socket server bind",
+      "status": "OK",
+      "entity_id": "8b4deeb2",
+      "nodes": 195,
+      "depth": 12,
+      "vars_renamed": 3,
+      "funcs_renamed": 1,
+      "has_errors": false,
+      "auto_label": false
+    },
+    {
+      "name": "C++ vector sort",
+      "status": "OK",
+      "entity_id": "1845a25e",
+      "nodes": 139,
+      "depth": 13,
+      "vars_renamed": 3,
+      "funcs_renamed": 1,
+      "has_errors": false,
+      "auto_label": false
+    }
+  ],
+  "hf": [
+    {
+      "name": "Buffer copy function",
+      "status": "OK",
+      "entity_id": "97b9fc8b",
+      "rename_count": 4,
+      "chunk_count": 1,
+      "outlier_count": 0,
+      "bidirectional": true,
+      "auto_label": true
+    },
+    {
+      "name": "Auth token processor",
+      "status": "OK",
+      "entity_id": "d8bd577c",
+      "rename_count": 5,
+      "chunk_count": 1,
+      "outlier_count": 1,
+      "bidirectional": true,
+      "auto_label": true
+    },
+    {
+      "name": "File reader",
+      "status": "OK",
+      "entity_id": "a4165801",
+      "rename_count": 6,
+      "chunk_count": 1,
+      "outlier_count": 0,
+      "bidirectional": true,
+      "auto_label": true
+    },
+    {
+      "name": "Network data sender",
+      "status": "OK",
+      "entity_id": "ed1857e2",
+      "rename_count": 6,
+      "chunk_count": 1,
+      "outlier_count": 0,
+      "bidirectional": true,
+      "auto_label": true
+    },
+    {
+      "name": "Memory pool allocator",
+      "status": "OK",
+      "entity_id": "753ee26f",
+      "rename_count": 8,
+      "chunk_count": 1,
+      "outlier_count": 0,
+      "bidirectional": true,
+      "auto_label": true
+    }
+  ],
+  "owasp": [
+    {
+      "name": "CWE-120 Buffer Overflow",
+      "status": "OK",
+      "entity_id": "035a893c",
+      "expected_cwe": "CWE-120",
+      "detected_cwes": [
+        "CWE-120"
+      ],
+      "taint_paths": 0,
+      "sinks_found": []
+    },
+    {
+      "name": "CWE-78 OS Command Injection",
+      "status": "OK",
+      "entity_id": "e52b179b",
+      "expected_cwe": "CWE-78",
+      "detected_cwes": [
+        "CWE-78"
+      ],
+      "taint_paths": 0,
+      "sinks_found": []
+    },
+    {
+      "name": "CWE-416 Use After Free",
+      "status": "OK",
+      "entity_id": "5809f265",
+      "expected_cwe": "CWE-416",
+      "detected_cwes": [
+        "CWE-416"
+      ],
+      "taint_paths": 0,
+      "sinks_found": []
+    },
+    {
+      "name": "CWE-134 Format String",
+      "status": "OK",
+      "entity_id": "0343753c",
+      "expected_cwe": "CWE-134",
+      "detected_cwes": [
+        "CWE-134"
+      ],
+      "taint_paths": 0,
+      "sinks_found": []
+    },
+    {
+      "name": "CWE-190 Integer Overflow",
+      "status": "OK",
+      "entity_id": "ae7bc671",
+      "expected_cwe": "CWE-190",
+      "detected_cwes": [
+        "CWE-190"
+      ],
+      "taint_paths": 0,
+      "sinks_found": []
+    }
+  ],
+  "dedup_test": {
+    "duplicate_detected": true
+  },
+  "whitelist_test": {
+    "malloc_preserved": true,
+    "strcpy_preserved": true,
+    "printf_preserved": true,
+    "free_preserved": true,
+    "socket_preserved": true,
+    "AF_INET_preserved": true,
+    "SOCK_STREAM_preserved": true,
+    "htons_preserved": true,
+    "sin_family_preserved": true,
+    "sin_port_preserved": true,
+    "struct_preserved": true,
+    "sockaddr_in_preserved": true
+  },
+  "auto_label_test": {
+    "is_vulnerable": true,
+    "cwe_ids": [
+      "CWE-398",
+      "CWE-120",
+      "CWE-119"
+    ],
+    "tool_findings": [
+      {
+        "tool": "cppcheck",
+        "detail": "<errors>"
+      },
+      {
+        "tool": "cppcheck",
+        "detail": "<error id=\"constParameterPointer\" severity=\"style\" msg=\"Parameter &apos;input&apos; can be declared as pointer to const\" verbose=\"Parameter &apos;input&apos; can be declared as pointer to const\" cwe=\"398\" file0=\"/tmp/tmp5bt56ipd.c\">"
+      },
+      {
+        "tool": "cppcheck",
+        "detail": "</error>"
+      },
+      {
+        "tool": "cppcheck",
+        "detail": "</errors>"
+      },
+      {
+        "tool": "flawfinder",
+        "detail": "/tmp/tmp5bt56ipd.c:3:44:  [4] (buffer) strcpy:"
+      },
+      {
+        "tool": "flawfinder",
+        "detail": "Does not check for buffer overflows when copying to destination [MS-banned]"
+      },
+      {
+        "tool": "flawfinder",
+        "detail": "(CWE-120). Consider using snprintf, strcpy_s, or strlcpy (warning: strncpy"
+      },
+      {
+        "tool": "flawfinder",
+        "detail": "easily misused)."
+      },
+      {
+        "tool": "flawfinder",
+        "detail": "/tmp/tmp5bt56ipd.c:3:30:  [2] (buffer) char:"
+      },
+      {
+        "tool": "flawfinder",
+        "detail": "Statically-sized arrays can be improperly restricted, leading to potential"
+      },
+      {
+        "tool": "flawfinder",
+        "detail": "overflows or other issues (CWE-119!/CWE-120). Perform bounds checking, use"
+      },
+      {
+        "tool": "flawfinder",
+        "detail": "functions that limit length, or ensure that the size is larger than the"
+      },
+      {
+        "tool": "flawfinder",
+        "detail": "maximum possible length."
+      }
+    ],
+    "auto_labeled": true
+  },
+  "hf_case_test": {
+    "NULL_preserved": true,
+    "EOF_preserved": true,
+    "EXIT_SUCCESS_preserved": true
+  },
+  "pipeline_stats": {
+    "vector_store_counts": {
+      "GITHUB": 5,
+      "HUGGINGFACE": 5,
+      "OWASP": 5
+    },
+    "timestamp": "2026-06-02T15:12:02.236995+00:00"
+  }
+}
